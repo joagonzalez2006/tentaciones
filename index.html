@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Buscador de Artículos</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .busqueda-seccion {
+      margin-bottom: 20px;
+    }
+    
+    .resultado-cuadro {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 15px;
+      margin-top: 20px;
+      background-color: #f9f9f9;
+    }
+    
+    .producto-info {
+      padding: 10px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .producto-info:last-child {
+      border-bottom: none;
+    }
+    
+    input, button {
+      padding: 8px;
+      margin: 5px 0;
+    }
+    
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    
+    button:hover {
+      background-color: #45a049;
+    }
+    
+    h2, h3 {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="carga-seccion">
+      <h2>Cargar archivo Excel</h2>
+      <input type="file" id="archivoExcel" accept=".xlsx, .xls" />
+    </div>
+    
+    <div class="busqueda-seccion">
+      <h3>Buscar artículo</h3>
+      <input type="text" id="busqueda" placeholder="Código (6 dígitos) o Nombre" />
+      <button onclick="buscar()">Buscar</button>
+    </div>
+    
+    <div id="resultado">
+      <!-- Aquí se mostrarán los resultados -->
+    </div>
+  </div>
+
+  <script src="planilla.js"></script>
+</body>
+</html>
