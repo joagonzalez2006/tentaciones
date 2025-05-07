@@ -75,7 +75,7 @@ function buscar() {
   const indiceCodigoArticulo = 0; // Columna A
   const indiceNombre = 1;         // Columna B
   const indiceCodigoOrigen = 2;   // Columna C
-  const indicePrecio = 3;         // Columna D
+  const indicePrecio = 4;         // Columna D
 
   // Busca desde la fila 2, ya que la 1 tiene los encabezados
   const encontrados = datosExcel.slice(1).filter(fila => {
